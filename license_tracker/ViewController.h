@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "DBManager.h"
 
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,strong) DBManager *model;
+@property (weak, nonatomic) IBOutlet UITableView *utblView;
+
+- (IBAction)viewLog:(UIButton *)sender;
 
 @end
 
