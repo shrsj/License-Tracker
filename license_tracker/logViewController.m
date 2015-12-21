@@ -62,9 +62,13 @@
     formatedDate = [dateFormat stringFromDate:todaysDate];
     self.todaysDate.text = formatedDate;
     
-    
+    [self.tableLog reloadData];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.tableLog reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

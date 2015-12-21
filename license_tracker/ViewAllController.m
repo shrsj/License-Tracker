@@ -227,6 +227,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tblViewAllLicense reloadData];
     [self displayAllLicenses];
     self.tblViewAllLicense.delegate = self;
     self.tblViewAllLicense.dataSource = self;
@@ -243,6 +244,7 @@
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     panGesture.delegate =self;
     [self.view addGestureRecognizer:panGesture];
+    
     
 }
 
